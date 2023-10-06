@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const Questions = () => {
   const navigate = useNavigate();
 
-  //let itemsPerPage = 15;
   const [itemsPerPage, setItemsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(0);
   const startIndex = currentPage * itemsPerPage;
@@ -29,8 +28,9 @@ const Questions = () => {
     paginatedData = data.slice(startIndex, endIndex);
   }
 
-  const handelPageNumberChange = (value) => {
+  const handlePageNumberChange = (value) => {
     setItemsPerPage(value);
+    setCurrentPage(0);
   };
   return (
     <>
@@ -38,7 +38,7 @@ const Questions = () => {
         <label> Page Count :</label>
         <select
           className="pageNumbers"
-          onChange={(e) => handelPageNumberChange(e.target.value)}
+          onChange={(e) => handlePageNumberChange(e.target.value)}
         >
           <option value="5">5</option>
           <option value="10">10</option>
@@ -73,7 +73,7 @@ const Questions = () => {
         </table>
         <div className="paginationContainer">
           <ReactPaginate
-            dpreviousLabel={"<Previous>"}
+            previousLabel={"Previous"}
             nextLabel={"Next"}
             breakLabel={"..."}
             pageCount={Math.ceil((data?.length || 0) / itemsPerPage)}
