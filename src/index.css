@@ -93,6 +93,10 @@ tr:hover {
   border-radius: 10px;
 }
 
+.next:hover {
+  background-color: #6fb8dc;
+  cursor: pointer;
+}
 .pagination a {
   color: black;
   float: left;
@@ -101,6 +105,9 @@ tr:hover {
   transition: background-color 0.3s;
 }
 
+.pagination a:hover {
+  background-color: #6fb8dc;
+}
 .pagination .active {
   background-color: #6fb8dc;
   color: white;
@@ -119,4 +126,14 @@ tr:hover {
   border-radius: 5px;
   height: 30px;
   width: 50px;
+}
+
+.search {
+  margin-top: 10px;
+}
+
+.search input {
+  height: 30px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
