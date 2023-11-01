@@ -34,8 +34,10 @@ Using npm:
 
    ```bash
   npm install
-  Using Yarn:
 ```
+
+ Using Yarn:
+
 
 
    ```bash
